@@ -1,0 +1,107 @@
+#container{
+	box-shadow:0 0 3px rgba(0,0,0, 0.1);
+	width:360px;
+	margin: 100px auto;
+	background: #f7f7f7;
+
+}
+
+.completed{
+	color: gray;
+	text-decoration: line-through;
+}
+
+h1{
+	background: #2980b9;
+	color: white;
+	font-weight: normal;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	
+}
+
+ul{
+	list-style: none;
+	/*sa list style mičemo točke ispre li-a u listi*/
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: Roboto;
+	background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+li{
+	background: #fff ;
+	height:40px;
+	line-height: 40px;
+	/*sa line heightom smo dobili todose napisane na sredini li-a po visini*/
+	color: #666 ;
+	outline: none;
+}
+
+/*css kod za svaki drugi li*/
+
+li:nth-child(2n){
+    background: #f7f7f7;
+}
+
+input{
+	font-size: 18px;
+	background-color: #f7f7f7;
+	color: #666;
+	padding: 13px 13px 13px 20px;
+	width: 100%;
+    box-sizing: border-box;
+    /*box sizing nam omogućuje da stavimo sve boxove u istu veličinu
+    ne vezano za padding i margin*/
+    color: #2980b9;
+    border:3px solid rgba(0, 0, 0, 0);
+
+}
+
+/*input:focus radi kao hover ili mouseover, ali kada kliknemo na njega radi ono što je zadanoa*/
+/*outline miče default shadow sa bordera i ostavlja samo boju koja je zadana*/
+input:focus{
+	background: #fff;
+	border:3px solid #2980b9;
+	outline: none;
+}
+
+
+
+/*font awesom ikona je ustvari klasa koju možemo uređivati u css*/
+
+.fa-plus{
+	float: right;
+	
+}
+
+/*uređivanje ikone i animacije sa hover ili mouseoverom*/
+/*istražiti transition i display inline-block*/
+
+span{
+	background: #e74c3c;
+	color: white;
+	height:40px;
+	margin-right:20px;
+	text-align: center;
+	width: 0px;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+
+}
+/*opacity kod spana je 0 da se ikona ne vidi dok ne pređemo sa mouseoverom*/
+li:hover span{
+	width: 40px;
+	opacity: 1;
+}
+
+/*css je dobro organizirati po dva načina jedan je po rasporedu htmla na stranici
+dok je drugi po specifičnosti tagova id-ova i klasa*/
